@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica JavaScript</title>
+    <style>
+        *{
+            transition: all 0.3s;
+        }
+
+        body{
+            background: slategrey;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 100%;
+        }
+
+        .container{
+            width: 98vw;
+            height: 97vh;
+            display: inline-flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid blanchedalmond;
+        }
+
+        .header{
+            background: white;
+            min-width: 300px;
+            width: 70%;
+            padding: 10px;
+            max-width: 600px;
+        }
+
+        .category{
+            opacity: 0.3;
+            text-align: left;
+        }
+
+        .question{
+            padding: 10px;
+        }
+
+        .btn{
+            background: white;
+            width: 60%;
+            padding: 10px;
+            margin: 5px;
+            max-width: 550px;
+        }
+
+        .btn:hover{
+            background: orange;
+            cursor: pointer;
+            transform: scale(1.05);
+        }
+        
+
+    </style>
+</head>
+<script type="module" src="js/script.js" async defer></script>
+
+<body>
+    <div id="container" class="container">
+    </div>
+</body>
+</html>
