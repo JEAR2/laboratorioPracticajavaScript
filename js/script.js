@@ -47,6 +47,66 @@ header.appendChild(question);
 container.append(header,optionOne,optionTwo,optionThree,optionFour);
 
 
+let n;
+let possibleAnswers=[];
+let question_base;
+let currentOptions = [optionOne,optionTwo,optionThree,optionFour];
+let userName;
+
+
+
+init();
+
+function init(){
+    userName=prompt("Ingresa nombre de Usuario: ","User");
+    localStorage.setItem("user",userName);
+    chooseQuestion();
+}
+
+function chooseQuestion(){
+   
+ n =  Math.floor(Math.random()*questions.length);
+ question_base = questions[n];
+ category.innerHTML = question_base.category;
+ question.innerHTML = question_base.question;
+ mixAnswers();
+
+}
+
+function mixAnswers(){
+    possibleAnswers =[question_base.correctAnswer,
+        question_base.wrongAnswerOne, question_base.wrongAnswerTwo,
+        question_base.wrongAnswerThree];
+    possibleAnswers.sort(()=>Math.random() - 0.5);    
+    optionOne.innerHTML = possibleAnswers[0];
+    optionTwo.innerHTML = possibleAnswers[1];
+    optionThree.innerHTML = possibleAnswers[2];
+    optionFour.innerHTML = possibleAnswers[3];
+}
+
+function pushButton(index){
+    
+    console.log(possibleAnswers[index]);
+    if(possibleAnswers[index]===question_base.correctAnswer){
+        currentOptions[index].style.background = "lightgreen";
+        setTimeout(()=>{
+            reloadOptions();
+        },1500);
+    }else{
+        currentOptions[index].style.background = "pink";
+        setTimeout(()=>{
+            alert("Respuesta Incorrecta");
+        },1000);
+    }
+   
+}
+
+function reloadOptions(){
+    for(const opt of currentOptions){
+        opt.style.background = "white";
+    }
+    chooseQuestion();
+}
     
 
 
