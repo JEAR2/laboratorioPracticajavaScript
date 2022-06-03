@@ -171,3 +171,31 @@ body{
     color:#bbe1fa;
 }
 
+table{
+    border: solid 1px #d6dde2;
+}
+table th{
+    background: #336e8d;
+    font-size: 22px;
+}
+table td{
+    background: #3a83aa;
+    font-size: 22px;
+}
+
+.container button {
+    font-family: 'Overpass', sans-serif;
+    font-size: 110%;
+    color:#1b262c;
+    width: 10%;
+    height: 40px;
+    border: none;
+    
+    border-radius: 3px 3px 3px 3px;
+    -moz-border-radius: 3px 3px 3px 3px;
+    -webkit-border-radius: 3px 3px 3px 3px;
+    
+    background-color: #bbe1fa;
+    
+    margin-top: 10px;
+}
